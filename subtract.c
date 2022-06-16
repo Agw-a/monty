@@ -1,27 +1,27 @@
 #include "monty.h"
 
 /**
- * _add - adds the top 2 elements of the stack.
+ * _sub - substracts the top element of the stack from the second.
  * @head: linked list's head address.
  * @line_number: line number from file.
  * Return: nothing
  */
-void _add(stack_t **head, unsigned int line_number)
+void _sub(stack_t **head, unsigned int line_number)
 {
-	int sum = 0;
+	int sub = 0;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		dprintf(
 			STDERR_FILENO,
-			"L%d: can't add, stack too short\n",
+			"L%d: can't sub, stack too short\n",
 			line_number
 			);
 		error = 1;
 		return;
 	}
 
-	sum = ((*head)->n) + (((*head)->next)->n);
+	sub = (((*head)->next)->n) - ((*head)->n);
 	_pop(head, line_number);
-	(*head)->n = sum;
+	(*head)->n = sub;
 }

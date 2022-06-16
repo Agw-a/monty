@@ -1,20 +1,23 @@
 #include "monty.h"
 
 /**
- * pi_nt-prints value at the top of the stack.
- * @top:address of the list head
- * @line_number:line number in the monty file
- * Return:void or nothig
+ * _pint - prints the value at the top of the stack.
+ * @head: the address of the linked list's head.
+ * @line_number: line number of line we're reading.
+ * Return: nothing
  */
 
-void pi_nt(stack_t **top, unsigned int line_number)
+void _pint(stack_t **head, unsigned int line_number)
 {
-	if (top == NULL || *top == NULL)
+	if (head == NULL || *head == NULL)
 	{
-	dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n",
-	line_number);
-	error_def = 1;
-	return;
+		dprintf(
+				STDERR_FILENO,
+				"L%d: can't pint, stack empty\n",
+				line_number
+		       );
+		error = 1;
+		return;
 	}
-	printf("%d\n", (*top)->n);
+	printf("%d\n", (*head)->n);
 }

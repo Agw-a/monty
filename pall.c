@@ -1,22 +1,22 @@
 #include "monty.h"
 
 /**
- * pa_ll-print all list data
- * @top:address of list head
- * @line_number:line number in monty file
- * Return:nothing
+ * _pall - print all linked list node data.
+ * @head: address of linked list's head.
+ * @line_number: the line number of the monty file we're treating.
+ * Return: nothing.
  */
-void pa_ll(stack_t **top, unsigned int line_number)
+void _pall(stack_t **head, unsigned int line_number)
 {
-	stack_t *t = *top;
+	stack_t *h = *head;
 
 	(void)line_number;
 
-	if (*top == NULL)
+	if (*head == NULL)
 		return;
-	while (t)
+	while (h)
 	{
-	printf("%d\n", t->n);
-	t = t->next;
+		printf("%d\n", h->n);
+		h = h->next;
 	}
 }
