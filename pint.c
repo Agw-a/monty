@@ -9,12 +9,12 @@
 
 void pi_nt(stack_t **top, unsigned int line_number)
 {
-    if (top == NULL || *top == NULL)
-    {
-        dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n",
-        line_number);
-        error_def = 1;
-        return;
-    }
-    printf("%d\n", (*top)->n);
+	if (top == NULL || *top == NULL)
+	{
+	dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n",
+	line_number);
+	error_def = 1;
+	return;
+	}
+	printf("%d\n", (*top)->n);
 }

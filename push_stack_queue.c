@@ -9,18 +9,18 @@
 
 void push_stack(stack_t **top, stack_t **new)
 {
-    if (*top == NULL)
-    {
-        (*new)->prev = NULL;
-        (*new)->next = NULL;
-        *top = (*new);
-    }
-    else
-    {
-        (*top)->prev = *new;
-        (*new)->next = *top;
-        *top = (*new);
-    }
+	if (*top == NULL)
+	{
+	(*new)->prev = NULL;
+	(*new)->next = NULL;
+	*top = (*new);
+	}
+	else
+	{
+	(*top)->prev = *new;
+	(*new)->next = *top;
+	*top = (*new);
+	}
 }
 
 /**
@@ -31,23 +31,23 @@ void push_stack(stack_t **top, stack_t **new)
  */
 void enqueue(stack_t **top, stack_t **new)
 {
-    stack_t *tmp;
+	stack_t *tmp;
 
-    if (*top == NULL)
-    {
-        (*new)->prev = NULL;
-        (*new)->next = NULL;
-        *top = (*new);
-    }
-    else
-    {
-        tmp = *top;
+	if (*top == NULL)
+{
+	(*new)->prev = NULL;
+	(*new)->next = NULL;
+	*top = (*new);
+}
+	else
+{
+	tmp = *top;
 
-        while (tmp->next)
-            tmp = tmp->next;
+	while (tmp->next)
+		tmp = tmp->next;
 
-        tmp->next = *new;
-        (*new)->next = NULL;
-        (*new)->prev = tmp;
-    }
+	tmp->next = *new;
+	(*new)->next = NULL;
+	(*new)->prev = tmp;
+}
 }

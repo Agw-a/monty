@@ -8,15 +8,15 @@
  */
 void pa_ll(stack_t **top, unsigned int line_number)
 {
-    stack_t *t = *top;
+	stack_t *t = *top;
 
-    (void)line_number;
+	(void)line_number;
 
-    if (*top == NULL)
-        return;
-    while (t)
-    {
-        printf("%d\n", t->n);
-        t = t->next;
-    }
+	if (*top == NULL)
+		return;
+	while (t)
+	{
+	printf("%d\n", t->n);
+	t = t->next;
+	}
 }
