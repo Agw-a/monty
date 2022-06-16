@@ -19,9 +19,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /*opcode*/
@@ -30,14 +30,13 @@ typedef struct stack_s
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
- *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /*Global variable*/
@@ -67,5 +66,7 @@ void po_p(stack_t **top, unsigned int line_number)
 
 /*pint.c*/
 void pi_nt(stack_t **top, unsigned int line_number)
+/*swap.c*/
+void swa_p(stack_t **top, unsigned int line_number)
 
 #endif /*MONTY_H_*/
