@@ -40,5 +40,32 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/*Global variable*/
+extern int error_def;
+
+/*DEFINED PROTOTYPES*/
+
+/*push.c*/
+void pu_sh(stack_t **top, unsigned int line_number, char *arg, int *mode)
+
+char *check_args(char *token, unsigned int line_number)
+
+void get_err(unsigned int line_number)
+
+int is_number(char *return_str, unsigned int line_number)
+
+/*pall.c*/
+void pa_ll(stack_t **top, unsigned int line_number)
+
+/*push_stack_queue*/
+void push_stack(stack_t **top, stack_t **new)
+
+void enqueue(stack_t **top, stack_t **new)
+
+/*pop.c*/
+void po_p(stack_t **top, unsigned int line_number)
+
+/*pint.c*/
+void pi_nt(stack_t **top, unsigned int line_number)
 
 #endif /*MONTY_H_*/
